@@ -15,14 +15,17 @@ def splitImg(path, newPath):
     img2 = img[xmedian:, 0:ymedian, :]
     img3 = img[0:xmedian, ymedian:, :]
     img4 = img[xmedian:, ymedian:, :]
-    fileName = path.split("/")[-1]
+    fileName = os.path.split(path)[-1]
+    #print("file name is %s" %fileName)
     fileName = fileName.split(".")[0]
     imgs = [img1, img3, img2, img4]
     for k in range(4):
             subName = '_img%d'%(k+1)
             newName = fileName + subName + ".jpg"
+            #print(newName)
             savePath = os.path.join(newPath,newName)
-            #cv2.imshow
+            #print(savePath)
+            #raise ValueError("break")
             cv2.imwrite(savePath, imgs[k])
 
 if __name__ == "__main__":
