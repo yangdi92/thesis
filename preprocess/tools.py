@@ -14,4 +14,3 @@ def get_files(path,suffix="xml"):
 
 def get_datetime(names):
     return names.split("_")[-2][0:8]
-

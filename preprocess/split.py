@@ -12,14 +12,14 @@ def _split(img_path, xml_path):
 		raise ValueError("the quality of images and xml must be same!")
 	for i in range(len(xmls)):
 		save_dir = "/".join(os.path.split(xmls[i])[0:-1])
-		save_dir = save_dir.replace("data",'splitdata')
+		save_dir = save_dir.replace("yd/data",'yd/splitdata')
 		if not os.path.exists(save_dir):
 			os.makedirs(save_dir)
 		print(xmls[i])
 		splitXml(xmls[i],save_dir)
 
 		save_dir = "/".join(os.path.split(imgs[i])[0:-1])
-		save_dir = save_dir.replace("data",'splitdata')
+		save_dir = save_dir.replace("yd/data",'yd/splitdata')
 		#print(save_dir)
 		#raise ValueError("break")
 		if not os.path.exists(save_dir):
@@ -30,7 +30,7 @@ def _split(img_path, xml_path):
 		
 
 if __name__ == "__main__":
-	img_path = "Y:\\thesis\\data"
-	xml_path = "Y:\\thesis\\data"
+	img_path = "/data/gwang_temp/yd/data"
+	xml_path = "/data/gwang_temp/yd/data"
 	_split(img_path, xml_path)
 
