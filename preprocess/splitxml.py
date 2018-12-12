@@ -3,8 +3,8 @@ import os
 import xml.etree.cElementTree as ET
 import copy
 import sys
-def generateXml():
-    pass
+# def generateXml():
+#     pass
 def splitXml(path, save):
     tree = ET.ElementTree(file=path)
     filename = tree.find("filename").text.split(".")[0]

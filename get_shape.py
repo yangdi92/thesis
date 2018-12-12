@@ -19,7 +19,7 @@ def get_shape(img_path):
 		tree.write(xml_path)
 
 if __name__ == "__main__":
-	img_path = r"Y:\thesis\data"
+	img_path = r"Y:\thesis\data\neimenggu"
 	get_shape(img_path)
 
 
