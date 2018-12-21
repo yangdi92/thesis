@@ -30,7 +30,7 @@ def _split(img_path, xml_path):
 		
 
 if __name__ == "__main__":
-	img_path = "/data/gwang_temp/yd/data"
-	xml_path = "/data/gwang_temp/yd/data"
+	img_path = r"Y:\thesis\data"
+	xml_path = r"Y:\thesis\data"
 	_split(img_path, xml_path)
 
